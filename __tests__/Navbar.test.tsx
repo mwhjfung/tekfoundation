@@ -15,7 +15,9 @@ describe('Navbar', () => {
 
   it('renders Donate button', () => {
     render(<Navbar />)
-    expect(screen.getByRole('link', { name: /donate/i })).toBeInTheDocument()
+    const donate = screen.getByRole('link', { name: /donate/i })
+    expect(donate).toBeInTheDocument()
+    expect(donate).toHaveAttribute('href', 'https://www.tekfoundation.org.au/donate')
   })
 
   it('renders LinkedIn and Instagram links', () => {
