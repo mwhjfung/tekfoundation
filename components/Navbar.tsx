@@ -19,7 +19,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-5">
           <Link
-            href="#about"
+            href="/about"
             className="hidden sm:block text-sm font-medium text-slate-600 hover:text-slate-900"
           >
             About Us

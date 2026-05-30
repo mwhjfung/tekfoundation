@@ -7,17 +7,17 @@ describe('Navbar', () => {
     expect(screen.getByAltText('tekFoundation')).toBeInTheDocument()
   })
 
-  it('renders About Us link pointing to #about', () => {
+  it('renders About Us link pointing to /about', () => {
     render(<Navbar />)
     const link = screen.getByRole('link', { name: /about us/i })
-    expect(link).toHaveAttribute('href', '#about')
+    expect(link).toHaveAttribute('href', '/about')
   })
 
   it('renders Donate button', () => {
     render(<Navbar />)
     const donate = screen.getByRole('link', { name: /donate/i })
     expect(donate).toBeInTheDocument()
-    expect(donate).toHaveAttribute('href', 'https://www.tekfoundation.org.au/donate')
+    expect(donate).toHaveAttribute('href', '/donate')
   })
 
   it('renders LinkedIn and Instagram links', () => {

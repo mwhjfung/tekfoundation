@@ -78,7 +78,7 @@ export const SUPPORTERS: { name: string; logo?: string }[] = [
 ]
 
 export const FOOTER = {
-  donateHref: 'https://www.tekfoundation.org.au/donate',
+  donateHref: '/donate',
   acknowledgement:
     'We acknowledge the Traditional Custodians of Country throughout Australia and their connections to land, sea, and community. We pay our respects to Elders past, present and emerging.',
   copyright: '© tekFoundation 2026',
