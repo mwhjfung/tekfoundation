@@ -21,4 +21,11 @@ describe('Testimonials', () => {
       expect(screen.getByText(new RegExp(org))).toBeInTheDocument()
     })
   })
+
+  it('renders each testimonial quote', () => {
+    render(<Testimonials />)
+    TESTIMONIALS.forEach(({ quote }) => {
+      expect(screen.getByText(`“${quote}”`)).toBeInTheDocument()
+    })
+  })
 })

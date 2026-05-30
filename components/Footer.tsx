@@ -20,7 +20,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
-              aria-label="LinkedIn"
             >
               LinkedIn
             </Link>
@@ -29,7 +28,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
-              aria-label="Instagram"
             >
               Instagram
             </Link>

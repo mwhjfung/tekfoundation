@@ -1,8 +1,8 @@
-import { VOLUNTEER_PROJECTS } from '@/data/content'
+import { VOLUNTEER_PROJECTS, VOLUNTEER_SECTION_ID } from '@/data/content'
 
 export default function VolunteerProjects() {
   return (
-    <section id="volunteer" className="bg-white border-b border-slate-100 py-16 px-6">
+    <section id={VOLUNTEER_SECTION_ID} className="bg-white border-b border-slate-100 py-16 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-extrabold text-slate-900 mb-3">
           Common Volunteer Projects

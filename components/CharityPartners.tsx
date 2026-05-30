@@ -23,7 +23,8 @@ export default function CharityPartners() {
             ) : (
               <div
                 key={name}
-                title={name}
+                role="img"
+                aria-label={name}
                 className="h-10 w-28 bg-brand-border rounded flex items-center justify-center text-xs font-semibold text-brand opacity-60"
               >
                 {name}

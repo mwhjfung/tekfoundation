@@ -25,6 +25,8 @@ export const CHARITY_PARTNERS: { name: string; logo?: string }[] = [
   { name: 'Partner 8' },
 ]
 
+export const VOLUNTEER_SECTION_ID = 'volunteer'
+
 export const VOLUNTEER_PROJECTS = [
   'Web Development',
   'Digital Marketing',

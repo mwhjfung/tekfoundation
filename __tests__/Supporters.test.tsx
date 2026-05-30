@@ -11,7 +11,7 @@ describe('Supporters', () => {
   it('renders a placeholder for each supporter', () => {
     render(<Supporters />)
     SUPPORTERS.forEach(({ name }) => {
-      expect(screen.getByTitle(name)).toBeInTheDocument()
+      expect(screen.getByRole('img', { name })).toBeInTheDocument()
     })
   })
 })
