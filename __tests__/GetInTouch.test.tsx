@@ -13,9 +13,9 @@ describe('GetInTouch', () => {
     expect(screen.getByText(GET_IN_TOUCH.body)).toBeInTheDocument()
   })
 
-  it('renders the CTA link', () => {
+  it('renders the embedded form iframe', () => {
     render(<GetInTouch />)
-    expect(screen.getByRole('link', { name: GET_IN_TOUCH.cta })).toHaveAttribute('href', GET_IN_TOUCH.href)
+    expect(screen.getByTitle('Get in Touch')).toBeInTheDocument()
   })
 
   it('has the correct id for anchor navigation', () => {

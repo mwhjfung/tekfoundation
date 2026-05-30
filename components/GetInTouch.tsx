@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Script from 'next/script'
 import { GET_IN_TOUCH } from '@/data/content'
 
 export default function GetInTouch() {
@@ -12,13 +12,17 @@ export default function GetInTouch() {
           {GET_IN_TOUCH.heading}
         </h2>
         <p className="text-white/80 text-lg mb-8">{GET_IN_TOUCH.body}</p>
-        <Link
-          href={GET_IN_TOUCH.href}
-          className="inline-block bg-white text-brand font-bold px-8 py-3 rounded-full hover:bg-slate-50 transition-colors"
-        >
-          {GET_IN_TOUCH.cta}
-        </Link>
+        <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/survey/blu8pS2IoHrMNfA3KcVG"
+            style={{ border: 'none', width: '100%' }}
+            scrolling="no"
+            id="blu8pS2IoHrMNfA3KcVG"
+            title="Get in Touch"
+          />
+        </div>
       </div>
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </section>
   )
 }
