@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import SignupForm from "@/components/SignupForm";
+import HeroVideo from "@/components/HeroVideo";
 import { STATS, TESTIMONIALS, CHARITY_NETWORK } from "@/data/site";
 
 const PATHS = [
@@ -33,7 +34,7 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="hero__media">
-          <img src="/images/photos/hero-community.jpg" alt="" aria-hidden="true" />
+          <HeroVideo />
         </div>
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__content">
@@ -128,11 +129,31 @@ export default function Home() {
             </p>
           </div>
           <div className="logo-strip">
-            {CHARITY_NETWORK.map((name) => (
-              <div key={name} className="logo-strip__tile">
-                <span className="logo-strip__name">{name}</span>
-              </div>
-            ))}
+            {CHARITY_NETWORK.map((org) =>
+              org.href ? (
+                <a
+                  key={org.name}
+                  href={org.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="logo-strip__tile logo-strip__tile--link"
+                >
+                  {org.logo ? (
+                    <img src={org.logo} alt={org.name} />
+                  ) : (
+                    <span className="logo-strip__name">{org.name}</span>
+                  )}
+                </a>
+              ) : (
+                <div key={org.name} className="logo-strip__tile">
+                  {org.logo ? (
+                    <img src={org.logo} alt={org.name} />
+                  ) : (
+                    <span className="logo-strip__name">{org.name}</span>
+                  )}
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -152,8 +173,13 @@ export default function Home() {
                 </span>
                 <blockquote>{t.quote}</blockquote>
                 <figcaption>
-                  <strong>{t.name}</strong>
-                  <span>{t.role}</span>
+                  {t.avatar && (
+                    <img src={t.avatar} alt={t.name} className="quote-card__avatar" />
+                  )}
+                  <div>
+                    <strong>{t.name}</strong>
+                    <span>{t.role}</span>
+                  </div>
                 </figcaption>
               </figure>
             ))}

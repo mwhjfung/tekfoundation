@@ -55,21 +55,24 @@ export const STATS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Being a not-for-profit, change can sometimes be slow, but updating and refreshing our website was one of the most critical steps we needed to take. Michael's contribution has been incredibly rejuvenating for the team and for the organisation as a whole.",
-    name: "Sarah Titheridge",
-    role: "Communications & Events Manager, St. Francis Social Services",
+      "It's been such a positive and reassuring experience. It's made what could have been quite a daunting process feel much more achievable. I'm very grateful for the time (the volunteer) is giving us and the way he's helping untangle our technology maze.",
+    name: "Yvonne Balakian",
+    role: "Operations Manager, Skillz4me",
+    avatar: "/images/testimonials/yvonne-balakian.jpg",
   },
   {
     quote:
-      "Helene has been wonderful to work with and we are really enjoying the opportunity to have an external party review some of our clunky processes and recommend ways forward. A great experience — I'm super thankful to tekFoundation for connecting us!",
-    name: "Julie Milsom",
-    role: "Acting Director, Wagga Women's Health Centre",
+      "There's a hundred times that I've thought to myself, I could put up a job ad. But the reality is you have to vet people. Having tekFoundation take that process out makes it so accessible and I trust the candidates you're sending back.",
+    name: "Maddie Catlin",
+    role: "General Manager, Future2 Foundation",
+    avatar: "/images/testimonials/maddie-catlin.jpg",
   },
   {
     quote:
-      "My heartfelt thanks to Joni. She helped me land my first volunteer role. Thank you, Joni, and the entire tekFoundation team, for opening a door that has made such a difference in my journey.",
-    name: "Shairali Mathur",
-    role: "Volunteer Salesforce Admin, Kids with Cancer Foundation",
+      "tekFoundation have been a brilliant resource for our organisation and the NFPs we support across the country. They have been able to very quickly find and recruit volunteers with the skills, knowledge and enthusiasm to really dig deep and help where they're needed most.",
+    name: "James Happell",
+    role: "Asia Pacific Consultant Lead, Infoxchange",
+    avatar: "/images/testimonials/james-happell.jpg",
   },
 ];
 
@@ -88,21 +91,21 @@ export const CHARITY_TESTIMONIALS = [
   },
 ];
 
-// Names shown in the "trusted by" strip. Logos are managed off-repo, so we
-// render confident name tiles rather than risk broken images.
+// "Trusted by" strip. Add a logo path to show an image; tiles fall back to
+// text if no logo is provided. Drop logo files into public/images/logos/charities/.
 export const CHARITY_NETWORK = [
-  "OzHarvest",
-  "Wagga Women's Health Centre",
-  "FoodLab Sydney",
-  "Kids with Cancer Foundation",
-  "Ability Enterprises",
-  "future2 Foundation",
-  "The Laptop Initiative",
-  "Kookaburra Kids",
-  "Fiji Book Drive",
-  "LocalKind",
-  "Diabetes Australia",
-  "St. Francis Social Services",
+  { name: "OzHarvest", href: "https://www.ozharvest.org", logo: "" },
+  { name: "Wagga Women's Health Centre", href: "https://www.wwhc.org.au", logo: "" },
+  { name: "FoodLab Sydney", href: "https://foodlabsydney.com", logo: "" },
+  { name: "Kids with Cancer Foundation", href: "https://kidswithcancer.org.au", logo: "" },
+  { name: "Ability Enterprises", href: "https://www.abilityenterprises.com.au", logo: "" },
+  { name: "future2 Foundation", href: "https://future2.org.au", logo: "" },
+  { name: "The Laptop Initiative", href: "https://thelaptopinitiative.org.au", logo: "" },
+  { name: "Kookaburra Kids", href: "https://www.kookaburrakids.org.au", logo: "" },
+  { name: "Fiji Book Drive", href: "", logo: "" },
+  { name: "LocalKind", href: "", logo: "" },
+  { name: "Diabetes Australia", href: "https://www.diabetesaustralia.com.au", logo: "" },
+  { name: "St. Francis Social Services", href: "https://sfss.org.au", logo: "" },
 ];
 
 export const PROJECT_TYPES = [

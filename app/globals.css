@@ -437,7 +437,8 @@ a {
 }
 
 .hero__media,
-.hero__media img {
+.hero__media img,
+.hero__media video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -448,12 +449,7 @@ a {
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(33, 8, 36, 0.88) 0%,
-    rgba(33, 8, 36, 0.45) 45%,
-    rgba(33, 8, 36, 0.18) 100%
-  );
+  background: rgba(155, 8, 153, 0.8);
 }
 
 .hero__content {
@@ -928,6 +924,17 @@ a {
 .quote-card figcaption {
   border-top: 1px solid var(--paper-deep);
   padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.quote-card__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .quote-card figcaption strong {
@@ -1017,6 +1024,16 @@ a {
   max-height: 2.75rem;
   max-width: 7.5rem;
   object-fit: contain;
+}
+
+.logo-strip__tile--link {
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.logo-strip__tile--link:hover {
+  border-color: var(--brand-border);
+  box-shadow: var(--shadow-card);
 }
 
 .logo-strip__name {
