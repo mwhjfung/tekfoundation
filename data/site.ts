@@ -102,9 +102,9 @@ export const CHARITY_NETWORK = [
   { name: "The Laptop Initiative", href: "https://thelaptopinitiative.org.au", logo: "/images/logos/charities/laptop-initiative.png" },
   { name: "Kookaburra Kids", href: "https://www.kookaburrakids.org.au", logo: "/images/logos/charities/kookaburra-kids.png" },
   { name: "Fiji Book Drive", href: "", logo: "/images/logos/charities/fiji-book-drive.png" },
-  { name: "LocalKind", href: "", logo: "/images/logos/charities/localkind.webp" },
+  { name: "LocalKind", href: "", logo: "" },
   { name: "Diabetes Australia", href: "https://www.diabetesaustralia.com.au", logo: "/images/logos/charities/diabetes-australia.webp" },
-  { name: "St. Francis Social Services", href: "https://sfss.org.au", logo: "" },
+  { name: "House of Welcome", href: "https://www.houseofwelcome.org.au", logo: "/images/logos/charities/house-of-welcome.png" },
 ];
 
 export const PROJECT_TYPES = [
