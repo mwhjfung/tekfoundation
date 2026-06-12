@@ -58,21 +58,21 @@ export const TESTIMONIALS = [
       "It's been such a positive and reassuring experience. It's made what could have been quite a daunting process feel much more achievable. I'm very grateful for the time (the volunteer) is giving us and the way he's helping untangle our technology maze.",
     name: "Yvonne Balakian",
     role: "Operations Manager, Skillz4me",
-    avatar: "/images/testimonials/yvonne-balakian.jpg",
+    avatar: "/images/testimonials/yvonne-balakian.png",
   },
   {
     quote:
       "There's a hundred times that I've thought to myself, I could put up a job ad. But the reality is you have to vet people. Having tekFoundation take that process out makes it so accessible and I trust the candidates you're sending back.",
     name: "Maddie Catlin",
     role: "General Manager, Future2 Foundation",
-    avatar: "/images/testimonials/maddie-catlin.jpg",
+    avatar: "/images/testimonials/maddie-catlin.jpeg",
   },
   {
     quote:
       "tekFoundation have been a brilliant resource for our organisation and the NFPs we support across the country. They have been able to very quickly find and recruit volunteers with the skills, knowledge and enthusiasm to really dig deep and help where they're needed most.",
     name: "James Happell",
     role: "Asia Pacific Consultant Lead, Infoxchange",
-    avatar: "/images/testimonials/james-happell.jpg",
+    avatar: "/images/testimonials/james-happell.jpeg",
   },
 ];
 
@@ -91,20 +91,19 @@ export const CHARITY_TESTIMONIALS = [
   },
 ];
 
-// "Trusted by" strip. Add a logo path to show an image; tiles fall back to
-// text if no logo is provided. Drop logo files into public/images/logos/charities/.
+// "Trusted by" strip. logo path is relative to /public.
 export const CHARITY_NETWORK = [
-  { name: "OzHarvest", href: "https://www.ozharvest.org", logo: "" },
-  { name: "Wagga Women's Health Centre", href: "https://www.wwhc.org.au", logo: "" },
-  { name: "FoodLab Sydney", href: "https://foodlabsydney.com", logo: "" },
-  { name: "Kids with Cancer Foundation", href: "https://kidswithcancer.org.au", logo: "" },
-  { name: "Ability Enterprises", href: "https://www.abilityenterprises.com.au", logo: "" },
-  { name: "future2 Foundation", href: "https://future2.org.au", logo: "" },
-  { name: "The Laptop Initiative", href: "https://thelaptopinitiative.org.au", logo: "" },
-  { name: "Kookaburra Kids", href: "https://www.kookaburrakids.org.au", logo: "" },
-  { name: "Fiji Book Drive", href: "", logo: "" },
-  { name: "LocalKind", href: "", logo: "" },
-  { name: "Diabetes Australia", href: "https://www.diabetesaustralia.com.au", logo: "" },
+  { name: "OzHarvest", href: "https://www.ozharvest.org", logo: "/images/logos/charities/ozharvest.svg" },
+  { name: "Wagga Women's Health Centre", href: "https://www.wwhc.org.au", logo: "/images/logos/charities/wwhc.png" },
+  { name: "FoodLab Sydney", href: "https://foodlabsydney.com", logo: "/images/logos/charities/foodlab-sydney.webp" },
+  { name: "Kids with Cancer Foundation", href: "https://kidswithcancer.org.au", logo: "/images/logos/charities/kids-with-cancer.png" },
+  { name: "Ability Enterprises", href: "https://www.abilityenterprises.com.au", logo: "/images/logos/charities/ability-enterprises.jpg" },
+  { name: "future2 Foundation", href: "https://future2.org.au", logo: "/images/logos/charities/future2.png" },
+  { name: "The Laptop Initiative", href: "https://thelaptopinitiative.org.au", logo: "/images/logos/charities/laptop-initiative.png" },
+  { name: "Kookaburra Kids", href: "https://www.kookaburrakids.org.au", logo: "/images/logos/charities/kookaburra-kids.png" },
+  { name: "Fiji Book Drive", href: "", logo: "/images/logos/charities/fiji-book-drive.png" },
+  { name: "LocalKind", href: "", logo: "/images/logos/charities/localkind.webp" },
+  { name: "Diabetes Australia", href: "https://www.diabetesaustralia.com.au", logo: "/images/logos/charities/diabetes-australia.webp" },
   { name: "St. Francis Social Services", href: "https://sfss.org.au", logo: "" },
 ];
 
