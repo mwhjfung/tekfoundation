@@ -121,7 +121,12 @@ export default function AboutPage() {
           <div className="team-grid">
             {BOARD.map((p) => (
               <div key={p.name} className="team-card">
-                <img src={p.photo} alt={p.name} className="team-card__photo" />
+                <img
+                  src={p.photo}
+                  alt={p.name}
+                  className="team-card__photo"
+                  style={p.photoPosition ? { objectPosition: p.photoPosition } : undefined}
+                />
                 <div className="team-card__name">{p.name}</div>
                 <div className="team-card__role">{p.role}</div>
                 <div className="team-card__org">{p.org}</div>
@@ -141,7 +146,12 @@ export default function AboutPage() {
           <div className="team-grid">
             {COMMITTEE.map((p) => (
               <div key={p.name} className="team-card">
-                <img src={p.photo} alt={p.name} className="team-card__photo" />
+                <img
+                  src={p.photo}
+                  alt={p.name}
+                  className="team-card__photo"
+                  style={p.photoPosition ? { objectPosition: p.photoPosition } : undefined}
+                />
                 <div className="team-card__name">{p.name}</div>
                 <div className="team-card__role">{p.role}</div>
               </div>

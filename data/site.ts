@@ -113,6 +113,7 @@ export const BOARD = [
     role: "Co-Founder, Director",
     org: "CEO, tekFinder",
     photo: "/images/team/nick-shepherd.jpg",
+    photoPosition: "center 18%",
   },
   {
     name: "Joni Fleischer",
@@ -142,7 +143,7 @@ export const BOARD = [
 
 export const COMMITTEE = [
   { name: "Angela", role: "Committee Member", photo: "/images/team/angela.jpeg" },
-  { name: "Betsy", role: "Committee Member", photo: "/images/team/betsy.jpeg" },
+  { name: "Betsy", role: "Committee Member", photo: "/images/team/betsy.jpeg", photoPosition: "center 30%" },
   { name: "Greg", role: "Committee Member", photo: "/images/team/greg.jpeg" },
   { name: "Margaret", role: "Committee Member", photo: "/images/team/margaret.jpeg" },
   { name: "Sinead", role: "Committee Member", photo: "/images/team/sinead.jpeg" },
