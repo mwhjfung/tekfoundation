@@ -107,6 +107,47 @@ export const CHARITY_NETWORK = [
   { name: "House of Welcome", href: "https://www.houseofwelcome.org.au", logo: "/images/logos/charities/house-of-welcome.png" },
 ];
 
+export const BOARD = [
+  {
+    name: "Nick Shepherd",
+    role: "Co-Founder, Director",
+    org: "CEO, tekFinder",
+    photo: "/images/team/nick-shepherd.jpg",
+  },
+  {
+    name: "Joni Fleischer",
+    role: "Co-Founder, Director",
+    org: "Head of tekFoundation",
+    photo: "/images/team/joni-fleischer.jpg",
+  },
+  {
+    name: "Dr Robert Winter",
+    role: "Director, Board Chair",
+    org: "Head of PMO, PRP Diagnostic Imaging",
+    photo: "/images/team/robert-board-director.jpg",
+  },
+  {
+    name: "Lucy Timms",
+    role: "Director",
+    org: "Director of Operations, Australian Schools Plus",
+    photo: "/images/team/lucy-timms.jpg",
+  },
+  {
+    name: "Aidan Beanland",
+    role: "Director",
+    org: "AD – SEO & Content Strategy, Optus",
+    photo: "/images/team/aidan-board-director.jpeg",
+  },
+];
+
+export const COMMITTEE = [
+  { name: "Angela", role: "Committee Member", photo: "/images/team/angela.jpeg" },
+  { name: "Betsy", role: "Committee Member", photo: "/images/team/betsy.jpeg" },
+  { name: "Greg", role: "Committee Member", photo: "/images/team/greg.jpeg" },
+  { name: "Margaret", role: "Committee Member", photo: "/images/team/margaret.jpeg" },
+  { name: "Sinead", role: "Committee Member", photo: "/images/team/sinead.jpeg" },
+];
+
 export const PROJECT_TYPES = [
   { icon: "design", label: "Website design" },
   { icon: "code", label: "Software support" },
