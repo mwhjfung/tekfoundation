@@ -13,7 +13,8 @@ const LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname.replace(/\/$/, '') || '/';
 
   return (
     <header className="nav">
