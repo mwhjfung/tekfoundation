@@ -34,7 +34,7 @@ export default function VolunteersPage() {
       {/* Hero */}
       <section className="hero">
         <div className="hero__media">
-          <img src="/images/photos/volunteers-event.jpg" alt="" aria-hidden="true" style={{ objectPosition: "center 8%" }} />
+          <img src="/images/photos/volunteers-event.jpg" alt="" aria-hidden="true" style={{ objectPosition: "center 15%" }} />
         </div>
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__content">
