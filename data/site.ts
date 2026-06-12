@@ -113,7 +113,7 @@ export const BOARD = [
     role: "Co-Founder, Director",
     org: "CEO, tekFinder",
     photo: "/images/team/nick-shepherd.jpg",
-    photoPosition: "center 18%",
+    photoPosition: "center 8%",
   },
   {
     name: "Joni Fleischer",
