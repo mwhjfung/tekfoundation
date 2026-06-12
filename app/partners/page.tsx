@@ -164,7 +164,7 @@ export default function PartnersPage() {
       {/* VaaS */}
       <section className="section" id="vaas">
         <div className="container">
-          <div className="section-head">
+          <div className="section-head" style={{ maxWidth: "none" }}>
             <p className="eyebrow">Volunteering as a Service</p>
             <h2 className="h2">Skilled volunteering, made easy.</h2>
             <p className="lede">
@@ -173,21 +173,23 @@ export default function PartnersPage() {
               well-supported experience.
             </p>
           </div>
-          <div className="vaas-stack">
+          <div className="card-grid">
             {VAAS_FORMATS.map((v) => (
-              <div key={v.name} className={`vaas-item${v.featured ? " vaas-item--featured" : ""}`}>
-                <div>
-                  {v.featured && <span className="vaas-item__label">Most flexible</span>}
-                  <h3 className="h3" style={{ marginBottom: "0.625rem" }}>{v.name}</h3>
-                  <p className="tier__blurb" style={{ marginTop: 0 }}>
-                    <strong>Best for:</strong> {v.bestFor}
-                  </p>
-                </div>
-                <p className="muted" style={{ fontSize: "0.975rem" }}>{v.body}</p>
+              <div key={v.name} className={`tier${v.featured ? " tier--featured" : ""}`}>
+                {v.featured && <span className="tier__flag">Most flexible</span>}
+                <h3 className="h3" style={{ marginBottom: "0.875rem" }}>
+                  {v.name}
+                </h3>
+                <p className="tier__blurb" style={{ marginTop: 0 }}>
+                  <strong>Best for:</strong> {v.bestFor}
+                </p>
+                <p className="muted" style={{ fontSize: "0.95rem", marginTop: "1rem", flex: 1 }}>
+                  {v.body}
+                </p>
               </div>
             ))}
           </div>
-          <p className="muted" style={{ marginTop: "2.5rem", maxWidth: "44rem" }}>
+          <p className="muted" style={{ marginTop: "2.5rem" }}>
             Our VaaS delivery menu is activated at the <strong>Impact Builder $15k tier and
             above</strong>. Partnerships can be tailored to your team size, goals, and budget, with
             options to mix and match program types across the year.
