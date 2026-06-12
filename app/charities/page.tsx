@@ -152,8 +152,8 @@ export default function CharitiesPage() {
             <h2 className="h2">Frequently asked questions.</h2>
           </div>
           {FAQS.map((f) => (
-            <details key={f.q} className="faq">
-              <summary>{f.q}</summary>
+            <div key={f.q} className="faq-block">
+              <h3 className="faq-block__q">{f.q}</h3>
               <div className="faq__body">
                 <p>{f.a.intro}</p>
                 <ul>
@@ -173,7 +173,7 @@ export default function CharitiesPage() {
                 )}
                 <p>{f.a.outro}</p>
               </div>
-            </details>
+            </div>
           ))}
         </div>
       </section>

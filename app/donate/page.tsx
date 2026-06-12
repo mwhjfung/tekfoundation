@@ -47,7 +47,9 @@ export default function DonatePage() {
                   stroke="currentColor"
                   strokeWidth="3.5"
                   strokeLinecap="round"
-                  transform="rotate(-3 60 28)"
+                  pathLength="1"
+                  className="circle-accent__stroke"
+                  transform="rotate(177 60 28)"
                 />
               </svg>
             </span>

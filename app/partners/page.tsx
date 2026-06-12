@@ -100,7 +100,7 @@ export default function PartnersPage() {
               with a trusted, growing community.
             </p>
           </div>
-          <div className="card-grid card-grid--4">
+          <div className="card-grid card-grid--2">
             {PARTNER_TIERS.map((tier) => (
               <div key={tier.name} className="tier">
                 <div className="tier__name">{tier.name}</div>
@@ -173,19 +173,17 @@ export default function PartnersPage() {
               well-supported experience.
             </p>
           </div>
-          <div className="card-grid">
+          <div className="vaas-stack">
             {VAAS_FORMATS.map((v) => (
-              <div key={v.name} className={`tier${v.featured ? " tier--featured" : ""}`}>
-                {v.featured && <span className="tier__flag">Most flexible</span>}
-                <h3 className="h3" style={{ marginBottom: "0.875rem" }}>
-                  {v.name}
-                </h3>
-                <p className="tier__blurb" style={{ marginTop: 0 }}>
-                  <strong>Best for:</strong> {v.bestFor}
-                </p>
-                <p className="muted" style={{ fontSize: "0.95rem", marginTop: "1rem", flex: 1 }}>
-                  {v.body}
-                </p>
+              <div key={v.name} className={`vaas-item${v.featured ? " vaas-item--featured" : ""}`}>
+                <div>
+                  {v.featured && <span className="vaas-item__label">Most flexible</span>}
+                  <h3 className="h3" style={{ marginBottom: "0.625rem" }}>{v.name}</h3>
+                  <p className="tier__blurb" style={{ marginTop: 0 }}>
+                    <strong>Best for:</strong> {v.bestFor}
+                  </p>
+                </div>
+                <p className="muted" style={{ fontSize: "0.975rem" }}>{v.body}</p>
               </div>
             ))}
           </div>

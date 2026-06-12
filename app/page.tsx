@@ -44,7 +44,7 @@ export default function Home() {
             tekFoundation connects Australian charities with skilled tech volunteers and trusted
             partners — turning community goodwill into real capability.
           </p>
-          <Link href="#paths" className="btn btn--primary btn--lg">
+          <Link href="#paths" className="btn btn--inverse btn--lg">
             Choose your path <Icon name="arrow" size={20} />
           </Link>
         </div>
@@ -190,7 +190,7 @@ export default function Home() {
       {/* Get in touch / signup */}
       <section className="section" id="get-in-touch">
         <div className="container">
-          <div className="split split--wide-left" style={{ alignItems: "start" }}>
+          <div className="split split--wide-right" style={{ alignItems: "start" }}>
             <div>
               <p className="eyebrow">Get in touch</p>
               <h2 className="h2">Something new is coming.</h2>
