@@ -228,7 +228,7 @@ a {
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.97);
 }
 
 .btn--primary {
@@ -1371,6 +1371,139 @@ a {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Motion design
+   ──────────────────────────────────────────────────────────── */
+
+@keyframes fade-up-in {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nav-drop {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ken-burns {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+/* Nav entrance */
+.nav {
+  animation: nav-drop 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Full-bleed hero content stagger */
+.hero__content > * {
+  opacity: 0;
+  animation: fade-up-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero__content > *:nth-child(1) { animation-delay: 0.2s; }
+.hero__content > *:nth-child(2) { animation-delay: 0.33s; }
+.hero__content > *:nth-child(3) { animation-delay: 0.48s; }
+.hero__content > *:nth-child(4) { animation-delay: 0.62s; }
+
+/* Hero-split entrance — text in first, image drifts in behind */
+.hero-split__grid > *:nth-child(1) {
+  opacity: 0;
+  animation: fade-up-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+.hero-split__grid > *:nth-child(2) {
+  opacity: 0;
+  animation: fade-up-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.28s forwards;
+}
+
+/* Ken Burns on static hero images */
+.hero__media img {
+  animation: ken-burns 14s ease-out both;
+}
+
+/* Scroll-triggered reveals — progressive enhancement */
+@supports (animation-timeline: view()) {
+  .section-head,
+  .card,
+  .quote-card,
+  .team-card,
+  .tier,
+  .faq-block,
+  .stats > * {
+    animation: fade-up-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 28%;
+  }
+}
+
+/* ── Hover lifts ─────────────────────────────────────────── */
+
+.card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-pop);
+}
+
+.tier {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease,
+    border-color 0.2s ease;
+}
+.tier:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-pop);
+  border-color: var(--brand-border);
+}
+
+.quote-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pop);
+}
+
+/* Team card photo scales on card hover */
+.team-card__photo {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.team-card:hover .team-card__photo {
+  transform: scale(1.07);
+}
+
+/* ── Arrow nudge on buttons and path cards ────────────────── */
+
+.btn svg,
+.path-card__cta svg {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover svg {
+  transform: translateX(4px);
+}
+.path-card:hover .path-card__cta svg {
+  transform: translateX(4px);
+}
+
+/* ── Icon disc rotate hint ────────────────────────────────── */
+
+.icon-disc {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+}
+.card:hover .icon-disc {
+  transform: rotate(-8deg) scale(1.1);
+  background: var(--brand-tint);
+}
+
+/* ── Logo strip hover ─────────────────────────────────────── */
+
+.logo-strip a {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.logo-strip a:hover {
+  transform: scale(1.07);
+  opacity: 1 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
