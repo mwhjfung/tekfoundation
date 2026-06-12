@@ -34,7 +34,7 @@ export default function VolunteersPage() {
       {/* Hero */}
       <section className="hero">
         <div className="hero__media">
-          <img src="/images/photos/volunteers-bondi.jpg" alt="" aria-hidden="true" />
+          <img src="/images/photos/volunteer-spotlight.jpg" alt="" aria-hidden="true" />
         </div>
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__content">
@@ -158,7 +158,7 @@ export default function VolunteersPage() {
       {/* Apply */}
       <section className="section section--paper" id="apply">
         <div className="container">
-          <div className="split split--wide-left" style={{ alignItems: "start" }}>
+          <div className="split split--wide-right" style={{ alignItems: "start" }}>
             <div>
               <p className="eyebrow">Apply to volunteer</p>
               <h2 className="h2">Ready when you are.</h2>

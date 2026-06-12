@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Icon from "@/components/Icon";
 import SignupForm from "@/components/SignupForm";
+import ParallaxImage from "@/components/ParallaxImage";
 import { MEMBERSHIP_TIERS, CHARITY_TESTIMONIALS, FAQS, SITE } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -27,12 +28,10 @@ export default function CharitiesPage() {
               See membership tiers <Icon name="arrow" size={20} />
             </a>
           </div>
-          <div className="hero-split__media">
-            <img
-              src="/images/photos/team-meeting.jpg"
-              alt="Charity staff and tekFoundation volunteers working together in a meeting room"
-            />
-          </div>
+          <ParallaxImage
+            src="/images/photos/team-meeting.jpg"
+            alt="Charity staff and tekFoundation volunteers working together in a meeting room"
+          />
         </div>
       </section>
 
@@ -181,7 +180,7 @@ export default function CharitiesPage() {
       {/* Apply */}
       <section className="section section--paper" id="apply">
         <div className="container">
-          <div className="split split--wide-left" style={{ alignItems: "start" }}>
+          <div className="split split--wide-right" style={{ alignItems: "start" }}>
             <div>
               <p className="eyebrow">Submit interest</p>
               <h2 className="h2">Tell us where you&rsquo;re at.</h2>

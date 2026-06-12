@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Icon from "@/components/Icon";
+import ParallaxImage from "@/components/ParallaxImage";
 import { PARTNER_TIERS, VAAS_FORMATS, SITE } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -49,12 +50,10 @@ export default function PartnersPage() {
               View partnership tiers <Icon name="arrow" size={20} />
             </a>
           </div>
-          <div className="hero-split__media">
-            <img
-              src="/images/photos/event-networking.jpg"
-              alt="Corporate partners and charity leaders connecting at a tekFoundation event"
-            />
-          </div>
+          <ParallaxImage
+            src="/images/photos/event-networking.jpg"
+            alt="Corporate partners and charity leaders connecting at a tekFoundation event"
+          />
         </div>
       </section>
 

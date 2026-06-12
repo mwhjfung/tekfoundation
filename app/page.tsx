@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import SignupForm from "@/components/SignupForm";
 import HeroVideo from "@/components/HeroVideo";
-import { STATS, TESTIMONIALS, CHARITY_NETWORK } from "@/data/site";
+import CountUp from "@/components/CountUp";
+import { STATS, TESTIMONIALS, CHARITY_NETWORK, SITE } from "@/data/site";
 
 const PATHS = [
   {
@@ -87,7 +87,7 @@ export default function Home() {
           <div className="stats">
             {STATS.map((s) => (
               <div key={s.label}>
-                <div className="stat__value">{s.value}</div>
+                <div className="stat__value"><CountUp value={s.value} /></div>
                 <div className="stat__label">{s.label}</div>
               </div>
             ))}
@@ -187,24 +187,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Get in touch / signup */}
-      <section className="section" id="get-in-touch">
-        <div className="container">
-          <div className="split split--wide-right" style={{ alignItems: "start" }}>
-            <div>
-              <p className="eyebrow">Get in touch</p>
-              <h2 className="h2">Something new is coming.</h2>
-              <p className="lede" style={{ marginTop: "1.25rem" }}>
-                We&rsquo;re in the final stages of launching a new operating model built around
-                charity memberships, skilled volunteering, and sponsorship-backed support.
-              </p>
-              <p className="muted measure" style={{ marginTop: "1.25rem" }}>
-                If you&rsquo;re a charity, a volunteer, or a digital partner, submit your interest
-                and stay connected as we open things up. We read every message.
-              </p>
-            </div>
-            <SignupForm />
-          </div>
+      {/* Get in touch */}
+      <section className="section section--tint" id="get-in-touch">
+        <div className="container cta-banner">
+          <p className="eyebrow">Get in touch</p>
+          <h2 className="h2">Ready to get involved?</h2>
+          <p className="lede">
+            Whether you&rsquo;re a charity, a skilled volunteer, or a company with purpose —
+            we&rsquo;d love to hear from you.
+          </p>
+          <a
+            href={`mailto:${SITE.email}`}
+            className="btn btn--primary btn--lg"
+          >
+            Get in touch <Icon name="arrow" size={20} />
+          </a>
         </div>
       </section>
     </main>

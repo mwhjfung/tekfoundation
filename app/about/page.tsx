@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import ParallaxImage from "@/components/ParallaxImage";
 import { BOARD, COMMITTEE } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -47,12 +48,10 @@ export default function AboutPage() {
               Get involved <Icon name="arrow" size={20} />
             </Link>
           </div>
-          <div className="hero-split__media">
-            <img
-              src="/images/photos/community-event.jpg"
-              alt="tekFoundation volunteers and charity partners at a community event"
-            />
-          </div>
+          <ParallaxImage
+            src="/images/photos/community-event.jpg"
+            alt="tekFoundation volunteers and charity partners at a community event"
+          />
         </div>
       </section>
 
