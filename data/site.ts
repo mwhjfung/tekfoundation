@@ -143,7 +143,7 @@ export const BOARD = [
 
 export const COMMITTEE = [
   { name: "Angela", role: "Committee Member", photo: "/images/team/angela.jpeg" },
-  { name: "Betsy", role: "Committee Member", photo: "/images/team/betsy.jpeg", photoPosition: "center 30%" },
+  { name: "Betsy", role: "Committee Member", photo: "/images/team/betsy.jpeg", photoPosition: "center 65%" },
   { name: "Greg", role: "Committee Member", photo: "/images/team/greg.jpeg" },
   { name: "Margaret", role: "Committee Member", photo: "/images/team/margaret.jpeg" },
   { name: "Sinead", role: "Committee Member", photo: "/images/team/sinead.jpeg" },
