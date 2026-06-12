@@ -1,46 +1,79 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { FOOTER } from '@/data/content'
+import Link from "next/link";
+import Icon from "./Icon";
+import { SITE, ACKNOWLEDGEMENT } from "@/data/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8">
-          <Image
-            src="/logo.png"
-            alt="tekFoundation"
-            width={160}
-            height={40}
-            className="h-8 w-auto brightness-0 invert"
-          />
-          <div className="flex gap-6 text-sm">
-            <Link
-              href={FOOTER.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href={FOOTER.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Instagram
-            </Link>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer__grid">
+          <div className="footer__brand">
+            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+              <img
+                src="/images/logos/brand/tekfoundation-logo-icon.png"
+                alt=""
+                aria-hidden="true"
+                style={{ height: "2.375rem", width: "auto" }}
+              />
+              <span
+                style={{
+                  fontSize: "1.35rem",
+                  fontWeight: 800,
+                  letterSpacing: "-0.025em",
+                  color: "var(--white)",
+                }}
+              >
+                tekFoundation<span style={{ color: "var(--brand-bright)" }}>.</span>
+              </span>
+            </div>
+            <p>
+              A trusted ecosystem connecting charities, tech talent, and corporate partners — turning
+              community goodwill into real capability.
+            </p>
+            <div className="social-row">
+              <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="tekFoundation on LinkedIn">
+                <Icon name="linkedin" size={18} />
+              </a>
+              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" aria-label="tekFoundation on Instagram">
+                <Icon name="instagram" size={18} />
+              </a>
+            </div>
+          </div>
+
+          <div className="footer__col">
+            <h4>Get involved</h4>
+            <ul>
+              <li><Link href="/charities">For charities</Link></li>
+              <li><Link href="/volunteers">For volunteers</Link></li>
+              <li><Link href="/partners">For corporate partners</Link></li>
+              <li><Link href="/donate">Donate</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer__col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+              <li>
+                <a href={SITE.liveSite} target="_blank" rel="noopener noreferrer">
+                  tekfoundation.org.au
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8 space-y-3 text-sm text-center sm:text-left">
-          <p>{FOOTER.acknowledgement}</p>
-          <p className="text-slate-500">
-            {FOOTER.copyright} · {FOOTER.abn} · ACNC Registered Charity
-          </p>
+        <div className="footer__meta">
+          <img src="/images/logos/acnc/acnc-registered-charity-logo.png" alt="ACNC Registered Charity" />
+          <div className="footer__legal">
+            © tekFoundation 2026 &nbsp;·&nbsp; ABN {SITE.abn}
+          </div>
         </div>
+
+        <p className="footer__ack">
+          {ACKNOWLEDGEMENT.body} <em>{ACKNOWLEDGEMENT.credit}</em>
+        </p>
       </div>
     </footer>
-  )
+  );
 }

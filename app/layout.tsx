@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "tekFoundation — Connecting charities with skilled volunteers",
+  title: {
+    default: "tekFoundation — we amplify the impact of charities",
+    template: "%s — tekFoundation",
+  },
   description:
-    "Since 2023, tekFoundation has partnered with frontline organisations to solve technical challenges and deliver lasting digital infrastructure.",
+    "tekFoundation connects Australian charities with skilled tech volunteers and trusted partners — turning community goodwill into real capability.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en-AU">
+      <body className={jakarta.variable}>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

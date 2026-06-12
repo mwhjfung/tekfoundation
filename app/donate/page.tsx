@@ -1,125 +1,127 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import DonateWidget from './DonateWidget'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Icon from "@/components/Icon";
+import DonationWidget from "@/components/DonationWidget";
+import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: 'Donate — tekFoundation',
+  title: "Donate",
   description:
-    'Make an impact today. Your donation subsidises matching services for Australian charities so they can focus on their mission.',
-}
+    "Your donation keeps tekFoundation's matching services highly subsidised for charities across Australia — so they can focus on their missions, not recruitment.",
+};
 
-const PILLARS = [
+const WHY_GIVE = [
   {
-    title: 'Unleash hidden potential',
-    body: 'Connects tech talent across Australia with causes that need specialised skills — bridging the gap between the sector and the people best placed to help.',
+    icon: "spark",
+    title: "Unleash hidden potential",
+    body: "Your donation allows us to tap into the wealth of tech talent across Australia and connect it to the causes that need their skills and experience.",
   },
   {
-    title: 'Fund a new giving economy',
-    body: 'Revolutionises how volunteers, employers, and charities demonstrate the value of skilled volunteering, creating lasting change beyond individual projects.',
+    icon: "coins",
+    title: "Fund a new giving economy",
+    body: "Your support helps us revolutionise the giving economy, where volunteers, employers and charities can prove the value of skilled volunteering.",
   },
   {
-    title: 'Exponential impact',
-    body: 'Acts as an enabler and multiplier, expanding what charities can achieve with every dollar and every hour donated by the tech community.',
+    icon: "chart",
+    title: "Exponential impact",
+    body: "tekFoundation is an enabler and force multiplier; your donation allows us to help even more charities amplify their impact.",
   },
-]
+];
 
 export default function DonatePage() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <main>
+      {/* Hero */}
+      <section className="section section--brand" style={{ paddingTop: "10rem" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h1 className="display" style={{ margin: "0 auto 1.5rem", maxWidth: "11em" }}>
+            Make an impact{" "}
+            <span className="circle-accent">
+              today
+              <svg viewBox="0 0 120 56" fill="none" aria-hidden="true">
+                <ellipse
+                  cx="60"
+                  cy="28"
+                  rx="56"
+                  ry="24"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  transform="rotate(-3 60 28)"
+                />
+              </svg>
+            </span>
+          </h1>
+          <p className="lede" style={{ margin: "0 auto", maxWidth: "38em" }}>
+            Your generous donation keeps our matching services highly subsidised for charities
+            across Australia — so they can focus on their missions, not recruitment.
+          </p>
+        </div>
+      </section>
 
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-brand to-[#a820a5] py-20 px-6 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4">
-              Make an impact today.
-            </h1>
-            <p className="text-white/80 text-lg">
-              Your donation subsidises matching services for Australian charities, enabling them to
-              concentrate on their missions rather than recruitment challenges.
-            </p>
-          </div>
-        </section>
+      {/* Why give + widget */}
+      <section className="section">
+        <div className="container">
+          <div className="split" style={{ alignItems: "start" }}>
+            <div>
+              <p className="eyebrow">Why give?</p>
+              <h2 className="h2">Every dollar builds capability.</h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginTop: "2.5rem" }}>
+                {WHY_GIVE.map((w) => (
+                  <div key={w.title} style={{ display: "flex", gap: "1.25rem" }}>
+                    <span className="icon-disc" style={{ marginBottom: 0 }}>
+                      <Icon name={w.icon} size={24} />
+                    </span>
+                    <div>
+                      <h3 className="h3" style={{ fontSize: "1.25rem", marginBottom: "0.4rem" }}>
+                        {w.title}
+                      </h3>
+                      <p className="muted" style={{ fontSize: "0.975rem" }}>
+                        {w.body}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-        {/* Why give */}
-        <section className="bg-white border-b border-slate-100 py-16 px-6">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-bold tracking-widest text-brand uppercase mb-3 text-center">
-              Why give
-            </p>
-            <h2 className="text-2xl font-extrabold text-slate-900 text-center mb-10">
-              Every dollar goes further here
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {PILLARS.map(({ title, body }) => (
-                <div key={title} className="bg-brand-tint rounded-xl p-8 border-t-4 border-brand">
-                  <h3 className="font-extrabold text-slate-900 mb-3">{title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{body}</p>
-                </div>
-              ))}
+              <img
+                className="rounded-photo"
+                src="/images/photos/donate-team.jpg"
+                alt="tekFoundation team members out meeting charity partners"
+                style={{ marginTop: "3rem", aspectRatio: "16 / 10" }}
+              />
+            </div>
+
+            <div style={{ position: "sticky", top: "6.5rem" }}>
+              <DonationWidget />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Donation widget */}
-        <section className="bg-slate-50 border-b border-slate-100 py-16 px-6">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-xs font-bold tracking-widest text-brand uppercase mb-3 text-center">
-              Give now
-            </p>
-            <h2 className="text-2xl font-extrabold text-slate-900 text-center mb-10">
-              Choose your contribution
-            </h2>
-            <DonateWidget />
-          </div>
-        </section>
-
-        {/* Tax info */}
-        <section className="bg-white border-b border-slate-100 py-12 px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm text-slate-500 leading-relaxed mb-4">
-              tekFoundation is an ACNC-registered charity. We are not currently a DGR-registered
-              organisation, which means standard donations are not tax-deductible. However, major
-              donors contributing{' '}
-              <span className="font-semibold text-slate-700">$5,000 or more</span> can access
-              tax-deductible options through our auspice partnership.
-            </p>
-            <Link
-              href="mailto:joni@tekfoundation.org.au"
-              className="text-brand font-semibold text-sm hover:underline"
-            >
-              Contact joni@tekfoundation.org.au for major donor enquiries →
+      {/* Sponsor callout */}
+      <section className="section section--paper">
+        <div className="container cta-banner">
+          <p className="eyebrow">Companies</p>
+          <h2 className="h2">Interested in sponsoring our work?</h2>
+          <p className="lede">
+            If your company wants to back the mission at a larger scale, a corporate partnership
+            delivers visible impact, employee engagement, and a story worth sharing. We&rsquo;d
+            love to discuss a collaboration.
+          </p>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/partners" className="btn btn--primary btn--lg">
+              Explore partnerships <Icon name="arrow" size={20} />
             </Link>
-          </div>
-        </section>
-
-        {/* Corporate CTA */}
-        <section className="bg-brand-tint py-16 px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs font-bold tracking-widest text-brand uppercase mb-3">
-              Corporate giving
-            </p>
-            <h2 className="text-2xl font-extrabold text-slate-900 mb-4">
-              Partner with us as a sponsor
-            </h2>
-            <p className="text-slate-500 mb-8">
-              Companies can amplify their social impact by sponsoring tekFoundation&apos;s programs,
-              enabling grassroots funding for charities that need it most.
-            </p>
-            <Link
-              href="mailto:joni@tekfoundation.org.au?subject=Corporate sponsorship enquiry"
-              className="inline-block bg-brand text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+            <a
+              href={`mailto:${SITE.email}?subject=2025 Impact Report request`}
+              className="btn btn--outline btn--lg"
             >
-              Enquire about sponsorship
-            </Link>
+              Request our 2025 Impact Report
+            </a>
           </div>
-        </section>
-
-      </main>
-      <Footer />
-    </>
-  )
+        </div>
+      </section>
+    </main>
+  );
 }
